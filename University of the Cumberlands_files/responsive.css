@@ -1,0 +1,528 @@
+
+/* ******************************** */
+/* Developed by R.Long and M.Nouhra */
+/* ******************************** */
+
+/* ************* */
+/* dropdown menu */
+/* ************* */
+a.menudrop {
+    text-align: right;
+    width: 100%;
+    font-size: 1.4em;
+    display: none;
+}
+
+/* ******************* */
+/* set image max-width */
+/* ******************* */
+img { max-width: 100%; }
+
+/* ******************* */
+/* Mobile Friendly CSS */
+/* ******************* */
+@media screen and (max-width: 768px) {
+
+	/* ************************* */
+	/* form related fron new CSS */
+	/* ************************* */
+	html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}dl,menu,ol,ul{margin:1em 0}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}ibutton::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}.clear{clear:both}*{box-sizing:border-box}.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.clearfix{display:inline-block}html[xmlns] .clearfix{display:block}* html .clearfix{height:1%}.clear-float{clear:both;margin:0;padding:0}
+
+	/* *************** */
+	/* jQuery UI fixes */
+	/* *************** */
+	.dynamicFormDefaults.ui-tabs{padding:0}.ui-corner-top,.ui-corner-all{border-radius:0}.ui-tabs .ui-tabs-nav li.ui-tabs-selected{border-bottom:0}.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{border:1px solid transparent}
+	 
+	/* ************ */
+	/* Form Related */
+	/* ************ */
+
+	/* fonts, legends*/
+	body, div, p, ul, ol, li, span, input, select, textarea, button, table, tr, td {
+		font-family: Arial, Helvetica, sans-serif!important;
+		font-size: 13px;
+	}
+
+	.legend { text-align: right; }
+	.dynamic-form-required { color: #9f3a38; }
+
+	/* form layout */
+	#form-wrapper {
+	    padding: 0 .5em;
+		margin: .2em auto;
+	}
+
+	/* sections */
+	.page-child-wrapper { margin-top: 2.5em; }
+	.page-child-helper{ list-style-type: none; padding: 0; }
+	ul.control-child-helper {
+	    list-style-type: none;
+		margin: 0;
+		padding: .8em;
+	}
+	.section-control { border: 1px solid #cccccc; }
+
+	/* section title bar */
+	.title {
+		background: #ececec;
+		border-bottom: 1px solid #cccccc;
+		padding: .7em;
+	}
+	.title span {font-size: 1.1em; font-weight: bold;}
+
+	/* fields */
+	.control-child-wrapper{float: left;}
+	.field-control {padding: .3em;margin: .5em 0;}
+	.field-control label {width: 8em;}
+	.field-control input, .field-control select {width: 13em;}
+	.top {
+		display: block;
+		margin-bottom: .3em;
+		width: auto;
+	}
+	.left {display: inline-block;text-align: right;}
+	.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	    border: 1px solid #cccccc;
+		border-radius: 3px;
+	    padding: .3em;
+	}
+	p.note { /* help text */margin: .1em 0 .3em 0;font-size: .9em;}
+
+	/* Legacy style: Wide controls will get special treatment.  They will stay at the max-width. */
+	.wide {width: 100%;}
+	ul.control-child-helper li.wide {width: auto;float: none;}
+
+	/* ********* */
+	/* Tab Fixes */
+	/* ********* */
+
+	/* general tab fixes */
+	.ui-tabs .ui-tabs-panel {min-width: 100%;}
+	.ui-tabs-nav {
+		/* background: #ececec; */ /* removed per NGP-27848 */
+		border: 1px solid transparent;
+		border-bottom: 1px solid #cccccc;
+		padding: .2em .2em 0 .2em;
+	}
+	.ui-tabs .ui-tabs-nav li {
+		border: 1px solid #cccccc;
+		border-bottom:  0;
+		padding-bottom: 0;
+	}
+	.ui-tabs .ui-tabs-nav li a {
+		/* background: #ECECEC; */ /* removed per NGP-27848 */
+	}
+	.ui-tabs-nav li.ui-state-active {
+		border-top: 1px solid #cccccc;
+		border-left: 1px solid #cccccc;
+		border-right: 1px solid #cccccc;
+	}
+	.ui-tabs-nav li.ui-state-active,
+	.ui-tabs-nav li.ui-state-active a {/* active tabs */
+		/* background: #FFFFFF; */ /* removed per NGP-27848 */
+		font-weight: bold;
+	}
+
+	/* left tabs changes */
+	.ui-tabs-left {width: 900px;margin: 0 auto;}
+	.ui-tabs-left .page-child-wrapper.first {margin-top: 0;}
+	.ui-tabs-left .ui-tabs-panel {
+		float: right;
+		padding-left: 0;
+		margin-left: 0;
+		min-width: 78%;
+		width: 78%!important;
+	}
+	.ui-tabs-left .ui-tabs-nav { 
+		border: 1px solid transparent;
+		border-right: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		float: left;
+		padding: .2em 0 .2em .2em;
+		width: 20%;
+	}
+	.ui-tabs-left .ui-tabs-nav li.ui-state-default {
+		border: 1px solid transparent;
+		clear: left;
+		margin: 0 0 .2em 0;
+		width: 100%;
+		white-space: normal !important;
+	}
+	.ui-tabs-left .ui-tabs-nav li a {
+		display: block;
+		padding: .5em;
+		width: 100%;
+	}
+	.ui-tabs-left .ui-tabs-nav li.ui-state-active{
+	    border-bottom: 1px solid #cccccc!important;
+	    border-right: 0;
+	    border-top: 1px solid #cccccc;
+	    border-left: 1px solid #cccccc;
+	    margin-left: 1px;
+		padding-right: 0;
+	}
+
+	/* ******* */
+	/* Buttons */
+	/* ******* */
+	.fg-button.ui-state-default {
+		border: 1px solid #d3d3d3;
+	    border-radius: 3px;
+	    background: #e6e6e6;
+	    margin-top: .3em;
+		min-width: 5em;
+	    padding: .5em;
+	}
+	.fg-button.ui-state-hover {background: #cfcfcf;}
+
+	/* Recommender and other .right-link buttons */
+	.right-link {
+		display: inline;
+		float: right;
+		font-weight: bold;
+	}
+
+	/* 'Remove Entry' buttons */
+	/* because the recommendation links have the same class as this, ('right-link') i'm requesting a new class for this button's a tag, class="remove-entry". Once this new class is in place, we can remove the a.right-link.right-link selectors */
+	a.right-link.right-link, a.remove-entry{
+		color: #9f3a38;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	a.right-link.right-link:before, a.remove-entry:before {/* content:'X ' */}
+		
+	/* 'Add Another Response'  buttons */
+	/* i'm requesting a new class for the div that holds this button, class="add-response". Once this new class is in place, we can remove the a[onclick*="_IW.FormsRuntime.duplicateSection"] selectors */
+	a[onclick*="_IW.FormsRuntime.duplicateSection"], .add-response a{
+		color: #1a531b;
+		text-decoration: none;
+	}
+	a[onclick*="_IW.FormsRuntime.duplicateSection"]:before, .add-response a:before{/* content: '+ ' */}
+
+	/* ************** */
+	/* Modal Dialogue */
+	/* ************** */
+	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {border-radius: 3px;}
+	.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix { /* modal title bar */
+		background: #e6e6e6;
+		border: 1px solid #cccccc;
+		padding: .5em;
+	}
+	.ui-widget-overlay {background: #666666 50% 50% repeat-x;opacity: .8;}
+	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable .fg-button.ui-state-default {display: block;margin: .5em auto;}
+	input[title=ContactAttachment],
+	input[title=RegistrationAttachment],
+	input[title=AttendeeAttachment],
+	input[title=InquiryAttachment],
+	input[title=DecisionAttachment],
+	input[title=RecommenderAttachment]{border: none!important;}
+
+	/* ***** */
+	/* Misc. */
+	/* ***** */
+	input#additionalGrandTotal, #programChargesTotal {/* charges and additional items table*/margin-top: .5em;}
+	
+	/* ********** */
+	/* Form Fixes */
+	/* ********** */
+
+	/* fonts, legends*/
+	body, div, p, ul, ol, li, span, input, select, textarea, button, table, tr, td {font-size: 16px;}
+	.field-control label, .left{
+		font-size: 1.1em;
+		text-align: left;
+		display: block;
+	}
+	.richtext-control, .richtext-control span {font-size: 1em!important;}
+	
+	/* form layout */
+	.dynamicFormDefaults {border: 0;width: 100% !important;}
+	.legend {margin-top: .2em;}
+	#form-wrapper,
+	#form-wrapper p{
+		margin: 0;
+		padding: 0;
+		width: 100% !important;
+	}
+	#form-header,
+	#form-footer,	
+	#form-wrapper .ui-tabs-panel,
+	#form-wrapper.ui-tabs-left .ui-tabs-panel{
+		padding: .5em;
+		max-width: 100%;
+		width: 100% !important;
+	}
+	#form-wrapper input, 
+	#form-wrapper select, 
+	#form-wrapper textarea,
+	#form-wrapper label	{
+		width: 100% !important;
+		text-align: left;
+	}
+
+	#form-wrapper .inline-block-div {
+		display: inline !important;
+	}
+
+	#form-wrapper .date-time-field-date, #form-wrapper .date-time-field-time {
+		width: 47% !important;
+	}
+
+	/* force header & footer images mobile for simple html blocks*/
+	#form-header img, #form-footer img {max-width: 100%;height: auto!important;}
+
+	/* sections */
+	.page-child-wrapper.first {margin-top: 0;}
+	ul.control-child-helper,ul.page-child-helper {padding: 0;width: 100%!important;}
+
+	/* section title bar */
+	.section-control {border: 1px solid #cccccc;}
+	.section-control .title {
+		height: auto;
+		padding: .5em;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	.title.clearfix span { /* title text */
+		display: block;
+		padding-top: 0;
+		position: initial;
+		text-align: left;
+	}
+
+	/* fields */
+	.control-child-wrapper{float: none;width: 100%;}
+	.top {margin-bottom: 0;}
+	p.note { /* help text */margin: 0 0 .3em 0;}
+	input {border: 1px solid #cccccc;}
+	select {border: 1px solid #cccccc;}
+
+	/* ********* */
+	/* Tab Fixes */
+	/* ********* */
+	.ui-tabs-nav.ui-widget-header {
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		border-bottom: 2px solid #ccc!important;
+		padding: 0!important;
+		width: 100%!important;
+	}
+	.ui-tabs .ui-tabs-nav li,
+	.ui-tabs-left .ui-tabs .ui-tabs-nav li{
+		border: none!important;
+		margin: 0 auto!important;
+		min-width: 100%;
+		text-align: center;
+		width: 100%!important;
+	}
+	.ui-tabs .ui-tabs-nav li a,
+	.ui-tabs-left .ui-tabs .ui-tabs-nav li a	{
+		display: block;
+		color: #555555;
+		font-weight: normal;
+		/* margin-bottom: .2em; */
+		padding: 1em!important;
+		width: 100%!important;
+		font-size: 18px;
+		background-color: inherit;
+	}
+	.ui-tabs-nav li.ui-state-active a {font-weight: bold;}
+	.ui-tabs-left .ui-tabs-nav li.ui-state-active a {border: none;font-weight: bold;}
+
+	/* ************** */
+	/* Buttons/Inputs */
+	/* ************** */
+	#form-wrapper input[type=checkbox], #form-wrapper input[type=radio] {
+		height: 1.334rem;
+		min-width: 1.334rem;
+		padding: 0;
+		width: auto!important;
+	}
+	
+	.form-action-bar button, /* Next/Save/Logout/Submit/Cancel buttons */
+	.fg-button.ui-state-default, /* Upload button */
+	.ui-dialog-content button.fg-button.ui-state-default /* modal continue button */{
+		border: 1px solid #d3d3d3;
+		border-radius: 3px;
+		color: #555555;
+		display: block;
+		font-weight: bold;
+		padding: 0.3em;
+		margin-right: 0;
+		margin-left: 0!important;
+		margin-bottom: .5em;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.field-control .fg-button.ui-state-default.ui-corner-all {width: 50%}
+	.form-action-bar.top {display: none;}
+	.form-action-bar.bottom {
+		padding: .2em 1em;
+		margin: 0 auto;
+		width: 100%!important;
+		margin-bottom: 44px!important;
+	}
+	.form-action-bar .right-buttons,
+	.form-action-bar .left-buttons	{ /* next & previous buttons */
+		display: inline-block;
+		width: 45%;
+		/* display: none;  only use on Inquiry Form */
+	}
+	
+	/* recommendation and other .right-link buttons */
+	.right-link {font-size: .8em;}
+	
+	/* 'Remove Entry'  buttons */
+	/* because the recommendation links have the same class as this, ('right-link') i'm requesting a new class for this button's a tag, class="remove-entry". Once this new class is in place, we can remove the a.right-link.right-link selectors */
+	/* NOTE: Above comment about creating a new class is not relevant at this time, as all buttons now have the same coloring/style. */
+	a.right-link.right-link, a.remove-entry{
+	   background-color: #FFFFFF;
+	   border: 1px solid #000000;
+	   border-radius: 3px;
+	   /*display: block!important; */ /* removed as was breaking the rec'os */
+	   /*float: none!important;*/ /* remove to align to right side 9/26/16 */
+	   font-size: .8em;
+	   color: #000000;
+	   margin: 3px;
+	   padding: 7px;
+	   min-width: 100px;
+	}
+
+	/* 'Add Another Response'  buttons */
+	/* i'm requesting a new class for the div that holds this button, class="add-response". once this new class is in place, we can remove the a[onclick*="_IW.FormsRuntime.duplicateSection"] selectors */
+	/* NOTE: Above comment about creating a new class is not relevant at this time, as all buttons now have the same coloring/style. */
+	.add-response{text-align: center;}
+	a[onclick*="_IW.FormsRuntime.duplicateSection"], .add-response a{
+		background-color: #FFFFFF;
+		border: 1px solid #000000;
+		border-radius: 3px;
+		font-size: .8em;
+		color: #000000;
+		padding: 7px;
+		width: 9em;
+	}
+	
+	/* institution lookup drop-down */
+	/* these need a class instead of the selector because the lookupmouseover isn't initialized. i'm suggesting class="lookup".
+		once the class is in place, we can get rid of the div[lookupmouseover=false] and div[lookupmouseover=true] selectors */
+	
+	div[lookupmouseover=false], div[lookupmouseover=true], .lookup {
+    	max-width: 100%!important;
+    	text-align: left!important;
+    	position: inherit!important;
+	}
+	
+	div[lookupmouseover=false] ul li span, div[lookupmouseover=true] ul li span, .lookup ul li span  {
+		display: inline!important;
+		font-size: 1em!important;
+	}
+
+	/* ************** */
+	/* Modal Dialogue */
+	/* ************** */
+
+	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {max-width: 90%;
+	}
+	input[title=ContactAttachment],
+	input[title=RegistrationAttachment],
+	input[title=AttendeeAttachment],
+	input[title=InquiryAttachment],
+	input[title=DecisionAttachment],
+	input[title=RecommenderAttachment],
+	input[title=description]{ /* modal upload button/input */
+		max-width: 100%;
+		margin-bottom: .5rem;
+	}
+	
+	/* Charges & Additional Items table */
+	table.dynamicFormDefaults td {
+		font-size: .9em!important;
+		padding: .2em;
+	}
+
+	/* ************* */
+	/* Dropdown menu */
+	/* ************* */
+	.ui-tabs { position: inherit; } /* inherit position for mobile menu to work */
+	.ui-tabs-nav>a { display:block; }
+	.ui-state-active { background: inherit; } /* remove white background set by jquery */
+	.ui-tabs-nav {
+		right:0px;
+		padding:0;
+		display:none;
+		pointer-events:none;
+		opacity:0;
+		transition:all 0.2s;
+		width: 100%;
+	}
+	.ui-tabs-nav li {
+		float:none;
+		margin-top:-51px;
+		transition:all 0.2s;
+	    width: 100%;
+	    display: block;
+	}
+	.ui-tabs-nav a {
+		width:100%;
+		border:0;
+		right:0;		
+	}
+	.nava {
+		display:block;
+		margin-top:0;
+		opacity:1;
+		pointer-events:all;
+		position: absolute;
+		top: 50px;
+		/* background: #eee!important; */ /* removed per NGP-27848 */
+		border-bottom: 5px solid #ccc!important;
+	}
+	.ui-tabs-left .ui-tabs .ui-tabs-nav .nava li { 
+		margin:0; 
+		/* background: #eee!important; */ /* removed per NGP-27848 */
+	}
+	li.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active a { 
+		/* background: white!important; */ /* removed per NGP-27848 */
+		/* border: 1px solid #ccc; */ /* removed per NGP-27848 */
+	}
+	#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li.ui-state-active, #form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li.ui-state-hover {border: none!important;}
+	.ui-widget-header {background: inherit; /* added per NGP-27848 - removes jquery default styling */}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {background: inherit; /* added per NGP-27848 - removes jquery default styling */}
+
+	/* ************ */
+	/* form buttons */
+	/* ************ */
+	.form-action-bar button {width: 100%!important;display: block;background: #ddd;padding: 5px;font-size: 14pt;}
+	.form-action-bar div { width: 100%; display: block; }
+	/*	.form-action-bar.top { display: none; margin-top: 20px; } removed, don't think this is being used */ 
+	.submit { background: #ccc!important; }
+
+	/* *********** */
+	/* menu button */
+	/* *********** */
+	a.menudrop {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 18pt;
+		text-decoration: none;
+		color: #333;
+		background: #ddd;
+		padding: 10px 0px;
+		box-sizing: border-box;
+		height: 50px!important;
+	}
+	img.burger { width: 18px; margin-right: 4px; } /* set burger icon size */
+}
+
+@media screen and (max-width: 562px) {
+	#form-wrapper .date-time-field-date {
+		width: 95% !important;
+	}
+
+	#form-wrapper .date-time-field-time {
+		width: 100% !important;
+	}
+}

@@ -1,0 +1,328 @@
+/*
+ * Styles for Forms (New) shared by Form Builder and Form Runtime. (ex. control styles)
+ * 
+ * What styles do not belong here:
+ * 
+ * Legacy Forms, Legacy Screens, ExtJS UI and custom components, Styles for Named ExtJS Components (Growl, ExtIFrame), ExtJS Theme, ExtJS Theme Overrides
+ *
+ */
+
+/* Clearfix for floated element containers. -- BEGIN */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+/* Clearfix for floated element containers. -- END */
+/*
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; }
+*:first-child+html .clearfix { zoom: 1; }
+*/
+
+/* When an anchor tag is clicked, don't give it an outline in firefox. */
+a:focus {
+	-moz-outline: none;
+	outline: none;
+}
+
+a {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+body {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+}
+
+body.font-scaled-small {
+	font-size: 9pt;
+}
+
+body.font-scaled-medium {
+	font-size: 10.5pt;
+}
+
+body.font-scaled-large {
+	font-size: 12pt;
+}
+
+/* This is for tables (and maybe 1 other place) */
+.dynamicFormDefaults {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+}
+
+body.font-scaled-small .dynamicFormDefaults {
+	font-size: 9pt;
+}
+
+body.font-scaled-medium .dynamicFormDefaults {
+	font-size: 10.5pt;
+}
+
+body.font-scaled-large .dynamicFormDefaults {
+	font-size: 12pt;
+}
+
+.dynamic-form-required {
+	color: #AB033A;
+	background-color: transparent;
+}
+
+.legend {
+	text-align: right;
+	padding-bottom: 5px;
+}
+
+label.top {
+	display: block;
+}
+
+ul.page-child-helper {
+	padding: 0;
+	margin: 0;
+}
+
+ul.page-child-helper li.page-child-wrapper {
+	list-style-type: none;
+}
+
+ul.page-child-helper li.page-child-wrapper {
+	margin-top: 25px;
+}
+
+ul.page-child-helper li.page-child-wrapper.first {
+	margin-top: 0;
+}
+
+div.section-control {
+	border: 1px solid #ccc;
+}
+
+div.section-control .title {
+	display: block;
+	border: 1px solid #ccc;
+	padding: 3px;
+	background-color: #ECECEC;
+	color: #000;
+	font-weight: bold;
+}
+
+ul.control-draggable, ul.control-child-helper {
+	padding: 0;
+}
+
+ul.control-child-helper li.control-child-wrapper {
+	padding: 0;
+	float: left;
+	list-style-type: none;
+}
+
+ul.control-draggable li.clear-float {
+	list-style-type: none;
+	font-size: 0pt; /* For IE */
+}
+
+ul.page-child-helper li.page-child-wrapper {
+	list-style-type: none;
+}
+
+ul.control-draggable li.float {
+	float: left;
+}
+
+/* Wide controls will get special treatment.  They will stay at the max-width. */
+ul.wide, li.wide {
+	width: 100%;
+}
+
+ul.control-child-helper li.wide {
+	width: auto;
+	float: none;
+}
+
+.field-control {
+	padding: 5px;
+}
+
+.field-control label {
+	width: 8em;
+}
+
+.field-control label.left {
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 0.3em;
+}
+
+.field-control input, .field-control select {
+	width: 14em;
+}
+
+.field-control img.ui-datepicker-trigger {
+	position: absolute;
+	padding: 0px 1px 1px 1px;
+}
+
+.field-control input[type="radio"],
+.field-control input[type="checkbox"] {
+	width: auto !important;
+}
+
+.field-control p.note {
+	margin: 5px 0 0;
+	font-size: 87.5%;
+}
+
+ul.control-child-helper {
+	margin: 0;
+}
+
+ul.control-child-helper li.clear-float {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+.right-link {
+	margin-left: 10px;
+}
+
+/*
+ * Layout the form itself.  By default;
+ * 
+ *  - A form with horizontal tabs will have a fluid width.
+ *  - A form with vertical tabs will have a fixed width.
+ */
+div#form-wrapper.ui-tabs-left {
+	width: 902px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+}
+
+body.scaled-small div#form-wrapper.ui-tabs-left {
+	width: 902px;
+}
+
+body.scaled-medium div#form-wrapper.ui-tabs-left {
+	width: 906px;
+}
+
+body.scaled-large div#form-wrapper.ui-tabs-left {
+	width: 912px;
+}
+
+div.ui-tabs { 
+	padding: 2px;
+}
+
+div.ui-tabs-left { 
+	width: 894px;	/* We want the width to default to the full width of the browser. */
+}
+
+div#form-wrapper.ui-tabs-left .ui-tabs-panel {
+	float: left;
+	/* NGP-19869 Fixing width problem */
+	margin-left: 0;
+	width: 732px;
+}
+
+div#form-wrapper.ui-tabs-left div#form-header, div#form-wrapper.ui-tabs-left div#form-footer {
+	width: 902px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+ * Defined left tabs.  We could use a fixed width and if we do then we would float left and the fixed width should not inherit height.
+ */
+#form-wrapper.ui-tabs-left .ui-tabs-nav { 
+	padding: 2px 1px 2px 2px;
+	/*float: left;*/	/* Don't float this, because parallel elements will retain the height. */
+	float: left;
+	width: 132px;
+	/*
+	position: absolute;
+	top: 11px;
+	left: 11px;
+	*/
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li { 
+	white-space: normal !important;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li {
+	clear: left;
+	width: 132px;
+	margin: 0 0 2px 0;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 0;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li {
+	border-right: 1px transparent !important;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li {
+	border-bottom: 1px transparent !important;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li.ui-state-active,
+#form-wrapper.ui-tabs-left .ui-tabs .ui-tabs-nav li.ui-state-hover {
+	border-bottom: 1px solid #AAAAAA !important;
+}
+
+#form-wrapper .ui-tabs .ui-tabs-nav li a {
+	padding: 6px 12px;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs-nav li a {
+	display: block;
+	width: 109px;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs-nav li.ui-tabs-selected {
+	padding-bottom: 0;
+	padding-right: 1px;
+	border-right-width: 1px;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs-panel {
+	padding: 12px;
+	/*float: right;
+	width: 40em;*/	/* We want the width to default to the full width of the browser. */
+	margin-left: 148px;
+}
+
+#form-wrapper.ui-tabs-left .ui-tabs-panel {
+	border: 1px solid #FFFFFF;
+}

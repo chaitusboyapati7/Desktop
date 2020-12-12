@@ -1,0 +1,126 @@
+/*
+ * Styles for Forms (New) specific to the Form Runtime.
+ * 
+ * What styles do not belong here:
+ * 
+ * Legacy Forms, Legacy Screens, ExtJS UI and custom components, Styles for Named ExtJS Components (Growl, ExtIFrame), ExtJS Theme, ExtJS Theme Overrides
+ *
+ */
+
+/* TODO - karl fix */
+
+/*.page-child {
+	margin-top: 25px;
+}
+
+.page-child.first {
+	margin-top: 0;
+}*/
+
+div.form-control.hidden {
+	display: none;
+}
+
+/* this is needed to remove the 'X' that IE forces upon us in textbox */ 
+input[type=text]::-ms-clear {
+    display: none;
+}
+/* Change box model for textarea so that the width of the outside border of the text area is our defining width. */
+div.form-control textarea {
+ -moz-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ width: "42em";
+}
+
+/*
+ * Styles for button bars and buttons.
+ */
+
+.form-action-bar .left-buttons {
+	float: left;
+}
+
+.form-action-bar .right-buttons {
+	float: right;
+}
+
+.form-action-bar .middle-buttons {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.form-action-bar button {
+	margin-right: 10px;
+}
+
+.form-action-bar button.last {
+	margin-right: 0;
+}
+
+.form-action-bar {
+	padding: 10px 0;
+}
+
+button.submit {
+	visibility: hidden;
+}
+
+.no-pages button.submit {
+	visibility: visible;
+}
+
+.mobile-responsive button.submit {
+	visibility: visible;
+}
+
+.last-page button.submit {
+	visibility: visible;
+}
+
+button.previous-page, button.next-page {
+	visibility: visible;
+}
+
+.no-pages button.previous-page, .first-page button.previous-page {
+	visibility: hidden;
+}
+
+.no-pages button.next-page, .last-page button.next-page {
+	visibility: hidden;
+}
+
+span.msg-wrapper.busy {
+	padding: 1px 20px 1px 0pt;
+	background: url("/crm/images/orion-busy.gif") no-repeat right center;
+}
+
+span.spinner {
+	padding: 1px 20px 1px 0pt;
+	background: url("/crm/images/orion-busy.gif") no-repeat right center;
+}
+
+.conditionallyHidden {
+	display: none;
+}
+
+.privacyPolicy {
+	font-size: 11px;
+	color: #666;
+	text-align: center;
+	visibility: hidden;
+}
+
+.no-pages .privacyPolicy {
+	visibility: visible;
+}
+
+.last-page .privacyPolicy {
+	visibility: visible;
+}
+
+/* Forms Sprite */
+.successSmall,.errorSmall {background-image: url(/crm/images/forms.png); background-repeat: no-repeat; background-color: transparent;}
+
+.errorSmall {background-position: 0px -0px !important; height:16px; width:16px; }
+.successSmall {background-position: 0px -17px !important; height:16px; width:16px; }

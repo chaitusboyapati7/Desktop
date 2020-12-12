@@ -1,0 +1,360 @@
+
+/*
+ * Styles for ExtJS UI and custom components.
+ * 
+ * What styles do not belong here:
+ * 
+ * Forms, Legacy Forms, Legacy Screens, Styles for Named ExtJS Components (Growl, ExtIFrame), ExtJS Theme, ExtJS Theme Overrides
+ *
+ */
+
+/* TODO: Put this into a lazyactionmenu.css. */
+.actionmenu .x-grid-cell-inner {
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 11px;
+}
+
+.actionmenu .x-btn-inner {
+	font-size: 11px;
+}
+
+a {
+	text-decoration:none;
+	color: #0000FF;
+}
+
+a:hover, a.link:hover {
+	text-decoration: underline;
+}
+
+a.x-btn:hover, a.x-tab:hover, a.x-menu-item-link {
+	text-decoration: none !important;
+}
+
+.mandatory {
+  color: #cd202c !important; 
+}
+
+.x-form-add-trigger {
+    background-image: url(/crm/images/add-trigger.gif);
+}
+
+/* Clearfix for floated element containers. -- BEGIN */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* Clearfix for floated element containers. -- END */
+
+.BoldString {
+	font-weight: bold;
+}
+
+.ItalicString {
+	font-style: italic;
+}
+
+/* Blank Icons */
+.resetPasswordSmall {
+    background: transparent url(/crm/images/blank.gif) no-repeat;
+    font-size:1px;
+	width: 16px;
+	height: 16px;
+}
+
+a, span.link {
+  color: #3C7DCD;
+}
+
+/* Odds and Ends from old intelliworks.css.  These are styles that were really meant for new content. */
+.defaultTextActive {
+	color: gray !important;	
+}
+
+.disabled-field {
+	background-color: #bfbfbf;
+	opacity: 0.5;
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	filter: alpha(opacity = 50);
+}
+
+/* Fix the top menu icon horizontal centering. */
+.topMenuButton {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: 32px !important;
+}
+
+/* Style for listview reload button. */
+.reloadViewSmall {background-image: url(/crm/javascript/extjs/resources/images/default/grid/refresh.gif); background-repeat: no-repeat; background-color: transparent;}
+
+/* Style for unread records on the List View. */
+.x-grid-row.unread-record td,
+.x-grid-row.unread-record td {
+	font-weight: bold;
+}
+
+/* Needed for the above ruleset to work with Intelliworks.css. */
+.x-grid-row.unread-record td .bodyText,
+.x-grid-row.unread-record td .link {
+	font-weight: bold !important;
+}
+
+/* Row numberer's should not be bold. */
+.x-grid-row.unread-record td.x-grid-cell-special {
+	font-weight: normal;
+}
+
+/* Style to hide a tree node icon. */
+.x-tree-node-el.no-icon .x-tree-node-icon { /* EXT3 */
+	display: none;
+}
+
+.x-tree-node-el.module {
+	font-weight: bold;
+}
+
+/*
+ * x-tree-icon-none - Hide the node icon in ExtJS 4.2.2.
+ */
+.x-tree-icon.x-tree-icon-none {
+	display: none !important;
+}
+
+/* Checkbox */
+.x-checkbox {
+    background: url("../javascript/extjs4/resources/themes/images/default/form/checkbox.gif") no-repeat scroll 0 0 transparent;
+    height: 13px;
+    margin: 0 1px;
+    vertical-align: middle;
+    width: 13px;
+}
+
+.x-checked {
+    background-position: 0 -13px !important;
+}
+
+/* default styles for criteria builder criteria */
+ul.cbcrit
+{
+	list-style-type: none;
+}
+
+/* Row Selector */
+.x-grid-row-rowselector-on .x-grid-cell, .x-grid-row-rowselector-on .x-grid-rowwrap-div {
+	background-color: #F6F5DF !important;
+	border-color: #E6E9A3;
+}
+
+.x-grid-td-rowselector .x-grid-cell-inner {
+	padding: 3px 0 0 1px !important;
+}
+
+.x-row-selector.x-column-header .x-column-header-inner {
+	padding: 3px 0 0 1px !important;
+}
+
+.x-grid-rowselector {
+	height: 16px; 
+	width: 16px;
+	cursor: pointer;
+}
+
+/* Grid Column Selector */
+.ux-group-column {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Ajax Download */
+div.ext-mb-icon.ext-mb-download-waiting {
+	background-image: url(../javascript/extjs/resources/images/default/shared/blue-loading.gif);
+	background-repeat: no-repeat; 
+	background-color: transparent;
+	background-position: 7px 0px; 
+}
+
+
+/* Styles for all content to scale font's. */
+body.font-scaled-small * {
+	font-size: 9pt !important;
+}
+
+body.font-scaled-medium * {
+	font-size: 10.5pt !important;
+}
+
+body.font-scaled-large * {
+	font-size: 12pt !important;
+}
+
+/* Styles for the font slider in the print application dialog. */
+.font-slider-title li {
+	float: left;
+	font: 1em Georgia, Times, serif;
+	line-height: 12pt;
+}
+
+.font-slider-title li.small {
+	font-size: 9pt;
+}
+
+.font-slider-title li.medium {
+	font-size: 10.5pt;
+}
+
+.font-slider-title li.large {
+	font-size: 12pt;
+	float: right;
+}
+
+.font-slider-tip {
+	font: 1em Georgia, Times, serif;
+}
+
+.font-slider-tip.small {
+	font-size: 9pt;
+}
+
+.font-slider-tip.medium {
+	font-size: 10.5pt;
+}
+
+.font-slider-tip.large {
+	font-size: 12pt;
+}
+
+/* Lazy Action Menu */
+.x-grid-cell.actionmenu .x-grid-cell-inner {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/* CRUD */
+.crud-label {
+	background-color: #F5F5F5; /* whitesmoke (#F5F5F5) fails CSS validation with some older browsers. */
+}
+
+.x-crud-focus {
+	border-color: purple !important;
+	border-width: 2px !important;
+}
+
+/*
+ * IMPORTANT-  We are purposely styling grid rows outside of the theme.
+ * 
+ * These styles could eventually be moved into the theme once we can move the theme folder hierarchy into SVN.
+ * 
+ * (In the following order.  In CSS this order will need to be reversed.)
+ * 
+ * Selected
+ * background  #ECF3FF
+ * border  #4285F4
+ * 
+ * Highlighted
+ * background  #FFF6D9
+ * border  #FFCF3D
+ * 
+ * Hover
+ * background  #FFFFD6
+ * border  #FFFF44
+ */
+
+/* Styles for grid trackOver. */
+.x-grid-row-over .x-grid-td {
+    background-color: #ffffd6 !important;
+}
+
+.x-grid-with-row-lines .x-grid-table-over-first {
+    border-top-style: solid !important;
+    border-top-color: #ffff44 !important;
+}
+
+.x-grid-row-over .x-grid-td {
+    border-bottom-style: solid !important;
+    border-bottom-color: #ffff44 !important;
+}
+
+.x-grid-row-before-over .x-grid-td {
+    border-bottom-style: solid !important;
+    border-bottom-color: #ffff44 !important;
+}
+
+/* Styles for Ext.grid.feature.RowHighlighter. */
+.x-grid-row-rowhighlighter .x-grid-td {
+    background-color: #fff6d9 !important;
+}
+
+.x-grid-with-row-lines .x-grid-table-rowhighlighter-first {
+    border-top-style: solid !important;
+    border-top-color: #ffcf3d !important;
+}
+
+.x-grid-row-rowhighlighter .x-grid-td {
+    border-bottom-style: solid !important;
+    border-bottom-color: #ffcf3d !important;
+}
+
+.x-grid-row-before-rowhighlighter .x-grid-td {
+    border-bottom-style: solid !important;
+    border-bottom-color: #ffcf3d !important;
+}
+
+/* Styles for row selector. */
+.x-grid-row-selected .x-grid-td {
+    background-color: #ecf3ff !important;
+}
+
+.x-grid-with-row-lines .x-grid-table-selected-first {
+    border-top-style: solid !important;
+    border-top-color: #4285f4 !important;
+}
+
+.x-grid-row-selected .x-grid-td {
+    border-bottom-style: solid !important;
+    border-bottom-color: #4285f4 !important;
+}
+
+.x-grid-row-before-selected .x-grid-td {
+    border-bottom-style: solid !important;
+    border-bottom-color: #4285f4 !important;
+}
+
+/* TODO: should have highlight for lookup searches be a class */
+.error-column {
+	/* the styling for a cell in a crud editable table that has errors */
+	/* TODO: is this a theme-able item? */
+	border-color: red;
+	border:solid 1px red;	
+}
+
+div.custom-x-message-box-question {
+	width: 50px;
+	height: 35px;
+	margin: 17px 0 0 0;
+	right: auto;
+	left: 0px;
+	top: 0px;
+}
+.menuItemWrap {
+	white-space: normal;
+}
